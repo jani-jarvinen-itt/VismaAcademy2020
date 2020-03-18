@@ -14,7 +14,14 @@ namespace SqlServerTesti.Tests
         [TestMethod()]
         public void SummaTest()
         {
-            Assert.Fail();
+            int a = 100;
+            int b = 200;
+
+            Laskenta l = new Laskenta();
+            int summa = l.Summa(a, b);
+
+            int odotettu = a + b;
+            Assert.AreEqual(odotettu, summa);
         }
     }
 }
