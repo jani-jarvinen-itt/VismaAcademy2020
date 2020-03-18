@@ -26,12 +26,18 @@ namespace SqlServerTesti
 
             MessageBox.Show("Tietokantayhteys avattu.");
 
-            // VAROITUS: SQL-injektiohyökkäysmahdollisuus
             string maa = textBox1.Text;
-            string sql = "SELECT * FROM Customers WHERE Country = '"+maa+"'";
+
+            // VAROITUS: SQL-injektiohyökkäysmahdollisuus
+            //string sql = "SELECT * FROM Customers WHERE Country = '"+maa+"'";
+
+            // parametroitu kysely
+            string sql = "SELECT * FROM Customers WHERE Country = @Maa";
+
             MessageBox.Show(sql);
 
             SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@Maa", maa);
             // command.ExecuteReader();
         }
     }
