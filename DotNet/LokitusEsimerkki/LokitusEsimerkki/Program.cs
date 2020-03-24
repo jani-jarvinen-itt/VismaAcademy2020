@@ -8,11 +8,8 @@ namespace LokitusEsimerkki
         {
             Console.WriteLine("Hello World!");
 
-            //ILokitus lokitus = new TiedostoLokitus();
-            ILokitus lokitus = new Lokitus();
-
             TietokantaTallennus tallennus = new TietokantaTallennus();
-            tallennus.Tallenna(null, lokitus);
+            tallennus.Tallenna(null);
         }
     }
 }

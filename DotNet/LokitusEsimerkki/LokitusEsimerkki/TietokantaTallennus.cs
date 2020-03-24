@@ -6,17 +6,41 @@ namespace LokitusEsimerkki
 {
     public class TietokantaTallennus
     {
-        public void Tallenna(object olio, ILokitus lokitus)
+        private ILokitus lokitus;
+
+        // constructor / rakentaja
+        public TietokantaTallennus() : base()
         {
-			try
-			{
-				// tallennetaan olio tietokantaan tässä...
-			}
-			catch (Exception ex)
-			{
-				string virhe = ex.Message;
-				lokitus.Virhe(virhe);
-			}
+            Riippuvuudet r = new Riippuvuudet();
+            lokitus = r.HaeLoki();
+        }
+
+        public void Tallenna(object olio)
+        {
+            try
+            {
+                // tallennetaan olio tietokantaan tässä...
+            }
+            catch (Exception ex)
+            {
+                string virhe = ex.Message;
+                lokitus.Virhe(virhe);
+            }
+        }
+
+        public object Lataa(string id)
+        {
+            try
+            {
+                // haetaan olio tietokannasta tässä...
+            }
+            catch (Exception ex)
+            {
+                string virhe = ex.Message;
+                lokitus.Virhe(virhe);
+            }
+
+            return null;
         }
     }
 }
