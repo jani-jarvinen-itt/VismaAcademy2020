@@ -44,5 +44,12 @@ namespace AspNetWebApiTest.Controllers
                 Puhelin = "050 111111"
             };
         }
+
+        [Route("")]
+        [HttpPost]
+        public bool LisääAsiakas([FromBody] Asiakas uusi)
+        {
+            return false;
+        }
     }
 }
