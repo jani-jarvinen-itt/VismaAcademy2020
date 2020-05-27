@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89B6F7BB-C442-42FA-B09A-6893D849B81A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AdventureWorksDemo</RootNamespace>
+    <AssemblyName>AdventureWorksDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Adventure\Address.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\AddressType.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\AdventureWorksModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorksModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\AdventureWorksModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\AdventureWorksModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\AWBuildVersion.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\BillOfMaterials.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\BusinessEntity.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\BusinessEntityAddress.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\BusinessEntityContact.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ContactType.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\CountryRegion.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\CountryRegionCurrency.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\CreditCard.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Culture.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Currency.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\CurrencyRate.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Customer.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\CustomerPII.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\DatabaseLog.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\DemoSalesOrderDetailSeed.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\DemoSalesOrderHeaderSeed.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Department.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\EmailAddress.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Employee.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\EmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\EmployeePayHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Employee_Temporal.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Employee_Temporal_History.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ErrorLog.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Illustration.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\JobCandidate.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Location.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\OrderTracking.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Password.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Person.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\PersonCreditCard.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\PersonPhone.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Person_json.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Person_Temporal.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Person_Temporal_History.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\PhoneNumberType.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Product.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductCategory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductCostHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductDescription.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductDocument.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductInventory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductListPriceHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductModel.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductModelIllustration.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductModelProductDescriptionCulture.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductPhoto.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductProductPhoto.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductReview.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductSubcategory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ProductVendor.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Product_inmem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Product_ondisk.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\PurchaseOrderDetail.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\PurchaseOrderHeader.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderDetail.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderDetail_inmem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderDetail_ondisk.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderHeader.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderHeaderSalesReason.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderHeader_inmem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrderHeader_ondisk.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesOrder_json.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesPerson.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesPersonQuotaHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesReason.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesTaxRate.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesTerritory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SalesTerritoryHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ScrapReason.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Shift.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ShipMethod.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\ShoppingCartItem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOffer.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOfferProduct.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOfferProduct_inmem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOfferProduct_ondisk.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOffer_inmem.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\SpecialOffer_ondisk.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\StateProvince.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Store.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\TrackingEvent.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\TransactionHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\TransactionHistoryArchive.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\UnitMeasure.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\Vendor.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\WorkOrder.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Adventure\WorkOrderRouting.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Categories.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\CustomerDemographics.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Customers.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Employees.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\NorthwindModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\NorthwindModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\NorthwindModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Orders.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Order_Details.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Products.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Region.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Shippers.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Suppliers.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\sysdiagrams.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Northwind\Territories.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Database\Adventure\AdventureWorksModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdventureWorksModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\Adventure\AdventureWorksModel.edmx.diagram">
+      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Database\Northwind\NorthwindModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\Northwind\NorthwindModel.edmx.diagram">
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Adventure\AdventureWorksModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdventureWorksModel.Context.cs</LastGenOutput>
+      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Database\Adventure\AdventureWorksModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
+      <LastGenOutput>AdventureWorksModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Northwind\NorthwindModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Northwind\NorthwindModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

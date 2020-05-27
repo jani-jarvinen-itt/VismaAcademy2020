@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AspNetWebApiTest.Entities;
 using AspNetWebApiTest.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,7 @@ namespace AspNetWebApiTest.Controllers
 {
     [Route("api/asiakas")]
     [ApiController]
+    // [Authorize]
     public class AsiakasApiController : ControllerBase
     {
         [Route("")]
@@ -32,11 +34,15 @@ namespace AspNetWebApiTest.Controllers
         }
 
 
-        /*
-        [Route("")]
+        [Route("demo")]
         [HttpGet]
-        public List<Asiakas> KaikkiAsiakkaat()
+        public List<Asiakas> KaikkiAsiakkaatDemo()
         {
+            /*
+            System.IO.File.ReadAllText(@"C:\Tiedosto.dat",
+                System.Text.Encoding.Unicode);
+            */
+
             return new List<Asiakas>()
             {
                 new Asiakas()
@@ -54,6 +60,7 @@ namespace AspNetWebApiTest.Controllers
             };
         }
 
+        /*
         [Route("{id:int}")]
         [HttpGet]
         public Asiakas YksiAsiakas(int id)

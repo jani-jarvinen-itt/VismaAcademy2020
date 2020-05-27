@@ -27,7 +27,10 @@ namespace AspNetWebApiTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<NorthwindContext>();
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.RespectBrowserAcceptHeader = true; // false by default
+            }).AddXmlSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
