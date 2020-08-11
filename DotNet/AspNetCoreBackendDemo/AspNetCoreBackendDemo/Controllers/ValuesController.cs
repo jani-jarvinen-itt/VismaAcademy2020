@@ -11,9 +11,18 @@ namespace AspNetCoreBackendDemo.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        [Route("luvut")]
+        [HttpGet]
         public int[] Luvut()
         {
             return new int[] { 1, 2, 3, 4 };
+        }
+
+        [Route("nimet")]
+        [HttpPost]
+        public string[] Nimet()
+        {
+            return new string[] { "Make", "Pena", "Kake" };
         }
     }
 }
