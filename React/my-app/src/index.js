@@ -5,9 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Hello from './Hello';
 import Link from './Link';
+import LoopDemo from './LoopDemo';
 
 ReactDOM.render(
   <React.StrictMode>
+    <LoopDemo />
     <App />
     <Link url="https://some.thing/" />
     <Hello name="Jani" />
