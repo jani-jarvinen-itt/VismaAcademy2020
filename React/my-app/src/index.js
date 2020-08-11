@@ -4,14 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Hello from './Hello';
+import Link from './Link';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Hello />
-    <Hello />
-    <Hello />
-    <Hello />
+    <Link url="https://some.thing/" />
+    <Hello name="Jani" />
   </React.StrictMode>,
   document.getElementById('root')
 );

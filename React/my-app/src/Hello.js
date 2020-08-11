@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Hello() {
+function Hello(props) {
   return (
-    <h1>Tämä on Hello-komponentti!</h1>
+  <h1>Moi {props.name}!</h1>
   );
 }
 
