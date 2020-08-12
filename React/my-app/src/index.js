@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Hello from './Hello';
-import Link from './Link';
-import LoopDemo from './LoopDemo';
+import LifecycleDemo from './LifecycleDemo';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoopDemo />
-    <App />
-    <Link url="https://some.thing/" />
-    <Hello name="Jani" />
+    <LifecycleDemo />
   </React.StrictMode>,
   document.getElementById('root')
 );
