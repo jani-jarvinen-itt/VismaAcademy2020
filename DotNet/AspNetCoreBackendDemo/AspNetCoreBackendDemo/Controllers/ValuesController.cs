@@ -24,5 +24,12 @@ namespace AspNetCoreBackendDemo.Controllers
         {
             return new string[] { "Make", "Pena", "Kake" };
         }
+
+        [Route("kellonaika")]
+        [HttpGet]
+        public object Kellonaika()
+        {
+            return new { aika = DateTime.Now.ToLongTimeString() };
+        }
     }
 }
