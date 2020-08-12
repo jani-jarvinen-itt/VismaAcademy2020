@@ -10,13 +10,17 @@ class Calculator extends React.Component {
 
         this.saveUserInput = this.saveUserInput.bind(this);
         this.saveUserInput2 = this.saveUserInput2.bind(this);
+        this.calculateSumOfNumbers = this.calculateSumOfNumbers.bind(this);
     }
 
     componentDidMount() {
     }
 
     calculateSumOfNumbers() {
-        alert("Lasketaan summaa!");
+        const num1 = parseInt(this.state.number1);
+        const num2 = parseInt(this.state.number2);
+        const sum = num1 + num2;
+        alert("Lasketaan summaa: " + sum);
     }
 
     saveUserInput(event) {
