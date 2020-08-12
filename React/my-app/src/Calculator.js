@@ -4,9 +4,15 @@ class Calculator extends React.Component {
 
     constructor(props) {
         super(props);
+
+        console.log("Calculator constructor.");
     }
 
     componentDidMount() {
+    }
+
+    calculateSumOfNumbers() {
+        alert("Lasketaan summaa!");
     }
 
     render() {
@@ -15,7 +21,7 @@ class Calculator extends React.Component {
                 <h1>Calculator</h1>
                 <p><input type="text" /></p>
                 <p><input type="text" /></p>
-                <p><button>Calculate sum</button></p>
+                <p><button onClick={this.calculateSumOfNumbers}>Calculate sum</button></p>
             </div>);
     }
 }
