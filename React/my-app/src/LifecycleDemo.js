@@ -5,6 +5,9 @@ class LifecycleDemo extends React.Component {
     constructor(props) {
         super(props);
         console.log("constructor()");
+
+        this.state = { todoTitle: "" };
+        console.log("constructor() -- tila alustettu");
     }
 
     componentDidMount() {
@@ -15,6 +18,9 @@ class LifecycleDemo extends React.Component {
             .then(json => {
                 console.log("Fetch-kutsu on valmis.");
                 console.log(json);
+
+                this.setState({ todoTitle: json.title });
+                console.log("SetState()-metodia kutsuttu.");
             });
 
         console.log("componentDidMount() -- fetch-kutsu tehty");
@@ -25,7 +31,7 @@ class LifecycleDemo extends React.Component {
         return (
             <div>
                 <h1>Tämä on LifecycleDemo-komponentti</h1>
-                <p></p>
+                <p>{this.state.todoTitle}</p>
             </div>);
     }
 }
