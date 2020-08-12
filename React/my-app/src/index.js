@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import LifecycleDemo from './LifecycleDemo';
-import Hello2 from './Hello2';
+import Calculator from './Calculator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LifecycleDemo />
-    <Hello2 />
+    <Calculator />
   </React.StrictMode>,
   document.getElementById('root')
 );
