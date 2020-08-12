@@ -6,20 +6,20 @@ class LifecycleDemo extends React.Component {
         super(props);
         console.log("constructor()");
 
-        this.state = { todoTitle: "" };
+        this.state = { kellonaika: "" };
         console.log("constructor() -- tila alustettu");
     }
 
     componentDidMount() {
         console.log("componentDidMount()");
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        fetch('https://localhost:44357/api/values/kellonaika')
             .then(response => response.json())
             .then(json => {
                 console.log("Fetch-kutsu on valmis.");
                 console.log(json);
 
-                this.setState({ todoTitle: json.title });
+                this.setState({ kellonaika: json.aika });
                 console.log("SetState()-metodia kutsuttu.");
             });
 
@@ -31,7 +31,7 @@ class LifecycleDemo extends React.Component {
         return (
             <div>
                 <h1>Tämä on LifecycleDemo-komponentti</h1>
-                <p>{this.state.todoTitle}</p>
+                <p>{this.state.kellonaika}</p>
             </div>);
     }
 }
