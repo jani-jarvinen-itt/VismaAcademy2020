@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Calculator from './Calculator';
+import CanvasDemo from './CanvasDemo';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Calculator />
+    <CanvasDemo />
   </React.StrictMode>,
   document.getElementById('root')
 );
