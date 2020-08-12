@@ -17,4 +17,4 @@ class LifecycleDemo extends React.Component {
     }
 }
 
-export default Hello2;
+export default LifecycleDemo;
