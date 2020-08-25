@@ -335,3 +335,9 @@ DotNet/AspNetCoreBackendDemo/.vs/AspNetCoreBackendDemo/DesignTimeBuild/.dtbcache
 /DotNet/AzureWebDemo/AzureWebDemo/bin/Debug/netcoreapp3.1
 /DotNet/AzureWebDemo/AzureWebDemo/obj
 /DotNet/AzureWebDemo/AzureWebDemo/bin/Release/netcoreapp3.1
+/BlazorDemo/BlazorApp/.vs/BlazorApp/v16/TestStore/0
+/BlazorDemo/BlazorApp/bin/Debug/netcoreapp3.1
+/BlazorDemo/BlazorApp/obj
+/DotNet/WpfApp1/.vs/WpfApp1/v16
+/DotNet/WpfApp1/WpfApp1/bin/Debug
+/DotNet/WpfApp1/WpfApp1/obj/Debug
