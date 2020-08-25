@@ -45,12 +45,14 @@ namespace WpfApp1
                                   where c.CompanyName == companyName
                                   select c).FirstOrDefault();
 
-            if (customer != null)
-            {
-                customerIdTextBox.Text = customer.CustomerID;
-                contactPersonTextBox.Text = customer.ContactName;
-                cityTextBox.Text = customer.City;
-            }
+            this.DataContext = customer;
+
+            //if (customer != null)
+            //{
+            //    customerIdTextBox.Text = customer.CustomerID;
+            //    contactPersonTextBox.Text = customer.ContactName;
+            //    cityTextBox.Text = customer.City;
+            //}
         }
     }
 }
