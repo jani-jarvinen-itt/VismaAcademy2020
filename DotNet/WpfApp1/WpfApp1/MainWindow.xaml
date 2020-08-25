@@ -8,12 +8,12 @@
         Title="WPF-demo + Entity Framework" Height="450" Width="800">
     <Grid>
         <Button Content="Lataa asiakkaat" HorizontalAlignment="Left" Margin="28,17,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="228" Margin="159,17,0,0" VerticalAlignment="Top" Width="336"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="228" Margin="159,17,0,0" VerticalAlignment="Top" Width="336" SelectionChanged="listBox1_SelectionChanged"/>
         <Label Content="Customer Id:" HorizontalAlignment="Left" Margin="526,25,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="531,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
+        <TextBox x:Name="customerIdTextBox" HorizontalAlignment="Left" Height="23" Margin="531,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
         <Label Content="Contact Person:" HorizontalAlignment="Left" Margin="526,92,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="531,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
+        <TextBox x:Name="contactPersonTextBox" HorizontalAlignment="Left" Height="23" Margin="531,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
         <Label Content="City:" HorizontalAlignment="Left" Margin="526,163,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="531,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
+        <TextBox x:Name="cityTextBox" HorizontalAlignment="Left" Height="23" Margin="531,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsReadOnly="True"/>
     </Grid>
 </Window>

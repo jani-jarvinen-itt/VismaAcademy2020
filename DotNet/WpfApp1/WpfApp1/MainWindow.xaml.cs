@@ -34,5 +34,23 @@ namespace WpfApp1
 
             listBox1.ItemsSource = allCustomers;
         }
+
+        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string companyName = listBox1.SelectedItem.ToString();
+            // MessageBox.Show(companyName);
+
+            NorthwindEntities context = new NorthwindEntities();
+            Customers customer = (from c in context.Customers
+                                  where c.CompanyName == companyName
+                                  select c).FirstOrDefault();
+
+            if (customer != null)
+            {
+                customerIdTextBox.Text = customer.CustomerID;
+                contactPersonTextBox.Text = customer.ContactName;
+                cityTextBox.Text = customer.City;
+            }
+        }
     }
 }
